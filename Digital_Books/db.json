@@ -1,0 +1,25 @@
+{
+  "customers": [
+    {
+      "Title": "Mobile Computing",
+      "Author": "Vinay Kumar Singhal",
+      "Publisher": "2011",
+      "ReleasedDate": "15-02-2022",
+      "id": 2
+    },
+    {
+      "Title": "CBOT",
+      "Author": "Gunjan Verma",
+      "Publisher": "Thakur Publications ",
+      "ReleasedDate": "2014",
+      "id": 3
+    },
+    {
+      "Title": "hjh",
+      "Author": "jhj",
+      "Publisher": "jh",
+      "ReleasedDate": "jh",
+      "id": 4
+    }
+  ]
+}

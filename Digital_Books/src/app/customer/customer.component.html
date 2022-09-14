@@ -1,0 +1,104 @@
+<!--<h1>Search Books</h1>
+Title
+<input [(ngModel)]="CustomerModel.Title" type="text" /><br/><br/>
+Author
+<input [(ngModel)]="CustomerModel.Author" type="text" /><br/><br/>
+Publisher
+<input [(ngModel)]="CustomerModel.Publisher" type="text" /><br/><br/>
+ReleasedDate
+<input [(ngModel)]="CustomerModel.ReleasedDate" type="text" /><br/><br/>
+<input type="button" value="Add Customer" (click)="Add()" />
+<br/><br/>
+<h2>Customer List</h2>
+
+<input type="button" (click)="DeleteCustomer()" value="delete" />
+-->
+<!--
+ ()=>event binding
+ []=>property binding
+ [()]=>2 way bindings
+-->
+
+<!-- {{CustomerModel.CustomerName}} -->
+
+<!-- <img [src]="imageURL" /> -->
+<!-- 
+<table>
+    <tr>
+        <td>Customer Code</td>
+        <td>Customer Name</td>
+        <td>Customer Amount</td>
+        <td>Actions</td>
+    </tr>
+    <tr *ngFor="let cust of CustomerModels">
+        <td>{{cust.CustomerCode}}</td>
+        <td>{{cust.CustomerName}}</td>
+        <td>{{cust.CustomerAmount}}</td>
+    </tr>
+</table> -->
+
+
+
+<br/><br/>
+    <div class="cotainer">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header">Search Books</div>
+                    <div class="card-body">
+                        <form action="" method="">
+                            <div class="form-group row">
+                                <label for="Title" class="col-md-4 col-form-label text-md-right">Title</label>
+                                <div class="col-md-6">
+                                    <input type="text" id="Title" class="form-control" [(ngModel)]="CustomerModel.Title" name="Title" required autofocus>
+                                    <br/><br/>
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label for="Author" class="col-md-4 col-form-label text-md-right">Author</label>
+                                <div class="col-md-6">
+                                    <input type="text" id="Author" class="form-control" [(ngModel)]="CustomerModel.Author" name="Author" required>
+                                    <br/><br/>
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label for="Publisher" class="col-md-4 col-form-label text-md-right">Publisher</label>
+                                <div class="col-md-6">
+                                    <input type="text" id="Publisher" class="form-control" [(ngModel)]="CustomerModel.Publisher" name="Publisher" required>
+                                    <br/><br/>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="ReleasedDate" class="col-md-4 col-form-label text-md-right">Released Date</label>
+                                <div class="col-md-6">
+                                    <input type="text" id="ReleasedDate" class="form-control" [(ngModel)]="CustomerModel.ReleasedDate" name="ReleasedDate" required>
+                                    <br/><br/>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                            <div class="col-md-3 offset-md-2">
+                                <button type="submit" value="Add" (click)="Add()" class="btn btn-primary">
+                                    Add
+                                </button>
+                            </div>
+                            
+                            <div class="col-md-2 offset-md-1">
+                                <button type="submit" value="Update" (click)="Add()" class="btn btn-primary">
+                                    Update
+                                </button>
+                            </div>
+                        </div>
+                         
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br/><br/>
+    <app-grid-ui  [grid-columns]="[{'colName':'id'},{'colName':'Title'},{'colName':'Author'},{'colName':'Publisher'},{'colName':'ReleasedDate'}]"
+[grid-data]="CustomerModels" 
+(grid-selected)="EditCustomer($event)" (grid-deleted)="DeleteCustomer($event)"
+></app-grid-ui>
+   

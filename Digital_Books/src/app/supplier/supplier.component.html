@@ -1,0 +1,133 @@
+<!--<h1>Create Books</h1>
+Title
+<input [(ngModel)]="SupplierModel.Title" type="text" /><br /><br />
+Category
+<input [(ngModel)]="SupplierModel.Category" type="text" /><br /><br />
+Image
+<input [(ngModel)]="SupplierModel.Image" type="text" /><br /><br />
+
+Price
+<input [(ngModel)]="SupplierModel.Price" type="text" /><br /><br />
+
+Publisher
+<input [(ngModel)]="SupplierModel.Publisher" type="text" /><br /><br />
+
+Active
+<input [(ngModel)]="SupplierModel.Active" type="text" /><br /><br />
+
+Content
+<input [(ngModel)]="SupplierModel.Content" type="text" /><br /><br />
+
+
+<input type="button" value="Add Supplier" (click)="Add()" />
+<br /><br />
+<h2>Supplier List</h2>-->
+<!--
+ ()=>event binding
+ []=>property binding
+ [()]=>2 way bindings
+-->
+
+<!-- {{SupplierModel.SupplierName}} -->
+
+<!-- <img [src]="imageURL" /> -->
+
+<!-- <table>
+    <tr>
+        <td>Supplier Code</td>
+        <td>Supplier Name</td>
+        <td>Supplier Amount</td>
+        <td>Actions</td>
+    </tr>
+    <tr *ngFor="let cust of SupplierModels">
+        <td>{{cust.SupplierCode}}</td>
+        <td>{{cust.SupplierName}}</td>
+        <td>{{cust.SupplierAmount}}</td>
+    </tr>
+</table> -->
+
+
+<br /><br />
+
+<div class="cotainer">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">Create Books</div>
+                <div class="card-body">
+                    <form action="" method="">
+                        <div class="form-group row">
+                            <label for="Title" class="col-md-4 col-form-label text-md-right">Title</label>
+                            <div class="col-md-6">
+                                <input type="text" id="Title" class="form-control" [(ngModel)]="SupplierModel.Title"
+                                    name="Title" required autofocus>
+                                <br /><br />
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="Category" class="col-md-4 col-form-label text-md-right">Category</label>
+                            <div class="col-md-6">
+                                <input type="text" id="Category" class="form-control"
+                                    [(ngModel)]="SupplierModel.Category" name="Category" required>
+                                <br /><br />
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="Image" class="col-md-4 col-form-label text-md-right">Image</label>
+                            <div class="col-md-6">
+                                <input type="text" id="Image" class="form-control" [(ngModel)]="SupplierModel.Image"
+                                    name="Image" required>
+                                <br /><br />
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="Price" class="col-md-4 col-form-label text-md-right">Price</label>
+                            <div class="col-md-6">
+                                <input type="text" id="Price" class="form-control" [(ngModel)]="SupplierModel.Price"
+                                    name="Price" required>
+                                <br /><br />
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="Publisher" class="col-md-4 col-form-label text-md-right">Publisher</label>
+                            <div class="col-md-6">
+                                <input type="text" id="Publisher" class="form-control"
+                                    [(ngModel)]="SupplierModel.Publisher" name="Publisher" required>
+                                <br /><br />
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="Active" class="col-md-4 col-form-label text-md-right">Active</label>
+                            <div class="col-md-6">
+                                <input type="text" id="Active" class="form-control" [(ngModel)]="SupplierModel.Active"
+                                    name="Active" required>
+                                <br /><br />
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="Content" class="col-md-4 col-form-label text-md-right">Content</label>
+                            <div class="col-md-6">
+                                <input type="text" id="Content" class="form-control" [(ngModel)]="SupplierModel.Content"
+                                    name="Content" required>
+                                <br /><br />
+                            </div>
+                        </div>
+                        <div class="col-md-6 offset-md-4">
+                            <button type="submit" value="Add Customer" (click)="Add()" class="btn btn-primary">
+                                Search
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <app-grid-ui
+        [grid-columns]="[{'colName':'id'},{'colName':'Title'},{'colName':'Category'},{'colName':'Image'},{'colName':'Price'},{'colName':'Publisher'},{'colName':'Active'},{'colName':'Content'}]"
+        [grid-data]="SupplierModels"></app-grid-ui>
