@@ -1,26 +1,36 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="#">Books</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
-            aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarScroll">
-            <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" [routerLink]="['home']">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" [routerLink]="['customer/add']">Search Books</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" [routerLink]="['supplier/add']">Create Books</a>
-                </li>
+<nav class="navbar navbar-expand-lg  navbar-dark bg-primary">
+    <div class="container px-5">
+        <a class="navbar-brand" href="index.html">Books</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span
+                class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item"><a class="nav-link" [routerLink]="['home']">Home</a></li>
+                <li class="nav-item"><a class="nav-link" [routerLink]="['customer/add']">Search Books</a></li>
+                <li class="nav-item"><a class="nav-link" [routerLink]="['supplier/add']">Create Books</a></li>
             </ul>
         </div>
     </div>
 </nav>
+
+
 <div class="container">
 
     <router-outlet></router-outlet>
 </div>
+<br/><br/>
+<footer class="bg-dark py-4 mt-auto">
+    <div class="container px-5">
+        <div class="row align-items-center justify-content-between flex-column flex-sm-row">
+            <div class="col-auto"><div class="small m-0 text-white">Copyright &copy; Your Website 2022</div></div>
+            <div class="col-auto">
+                <a class="link-light small" href="#!">Privacy</a>
+                <span class="text-white mx-1">&middot;</span>
+                <a class="link-light small" href="#!">Terms</a>
+                <span class="text-white mx-1">&middot;</span>
+                <a class="link-light small" href="#!">Contact</a>
+            </div>
+        </div>
+    </div>
+</footer>

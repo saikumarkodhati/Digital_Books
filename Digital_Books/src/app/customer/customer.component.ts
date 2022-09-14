@@ -53,6 +53,7 @@ else{
     this.CustomerModel = input;
   }
   DeleteCustomer(input:any){
+    debugger;
     this.http.delete("http://localhost:3000/customers/1").subscribe(res=>console.log(res),res=>console.log(res));
     this.CustomerModel=input;
   }
